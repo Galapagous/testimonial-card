@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Montserrat:wght@700;900&family=Poppins:wght@200;300&family=Roboto+Mono:wght@300;500&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      font-size: 13px;
+      background-color: lightgray;
+    }
+    /*------grid design layout----------*/
+    .container{
+      display: grid;
+      grid-template-areas: 
+      'user1 user1 user2 user3'
+      'user4 user5 user5 user3'
+      ;
+      grid-template-rows: 280px 280px;
+      gap: 15px;
+      color: hsl(0, 0%, 100%);
+  }
+  h3{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .container .box{
+      border-radius: 6px;
+      height: auto;
+      padding: 1rem;
+      background-color: hsl(0, 0%, 100%);
+  }
+  .container .box img{
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  .container .box .topbar{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  .container > .user1{
+      grid-area: user1;
+      background: url('./images/bg-pattern-quotation.svg') no-repeat;
+      background-color: hsl(263, 55%, 52%);
+  }
+  .container > .user2{
+      grid-area: user2;
+      background-color: hsl(217, 19%, 35%);
+  }
+  .container > .user3{
+      grid-area: user3;
+      color: black;
+    }
+    .container > .user4{
+      grid-area: user4;
+      color: black;
+    }
+    .container > .user5{
+      grid-area: user5;
+      background-color: hsl(219, 29%, 14%);
+  }
+  .container .item{
+      padding: 2rem;
+      background-color: blue;
+      border: 1px solid black;
+  }
+
+  /*--------------Media queries-------------*/
+  @media(max-width: 375px){
+    .container{
+      display: grid;
+      grid-template-areas: 
+      'user1'
+      'user2'
+      'user3'
+      'user4'
+      'user5'
+      ;
+      grid-template-rows: 250px 250px;
+      grid-template-rows: 400px 300px;
+      gap: 15px;
+      color: hsl(0, 0%, 100%);
+  }
+  }
